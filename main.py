@@ -15,5 +15,13 @@ def api(station, date):
         "temperature": temperature
     }
 
+@app.route("/api/v1/<definition>/")
+def api_definition(definition):
+    return {
+        "definition": definition.upper(),
+        "word": definition,
+    }
+
+
 if __name__ == '__main__':
     app.run(debug=True)
